@@ -44,7 +44,7 @@ def watch_for(filename, pattern)
     select([f])
     line = f.gets
     # If the pattern is matched, perform an action
-    send_email_os if line=~pattern
+    puts "Found #{@pattern} in #{line}" if line =~ /#{pattern}/
   end
 end # of watch_for
 
