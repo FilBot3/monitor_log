@@ -23,5 +23,6 @@ Gem::Specification.new do |spec|
 
   # The gem, even though its requried, doesn't need to be listed here.
   spec.add_development_dependency "warbler"
-  
+  spec.add_runtime_dependency "warbler"
+
 end
