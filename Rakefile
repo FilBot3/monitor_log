@@ -2,7 +2,7 @@ require "bundler/gem_tasks"
 require "fileutils"
 
 desc "Building distributable executables"
-namespace :build do
+namespace :create do
   desc "Generate a JRuby Warbler JAR"
   task :jar do
     puts "=> Generating the JRuby JAR"
