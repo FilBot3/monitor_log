@@ -23,7 +23,9 @@ Or install it yourself as:
 
 When compiled in JRuby using Warbler, run the JAR as such:
 
-    java -jar monitor_log.jar -f /path/to/file.log -p PATTERN
+```bash    
+java -jar monitor_log.jar -f /path/to/file.log -p PATTERN
+```
 
 As long as Java is installed, and in the PATH, it will run, and be sure to put the program into the background.
 
@@ -33,7 +35,7 @@ As long as Java is installed, and in the PATH, it will run, and be sure to put t
 
 To compile as a JRuby JAR, be sure that JRuby is installed, and that the Warbler gem is installed. Then run the rake task to compile and place the JAR. To find the rake task, just execute `rake -T`.
 
-### Ruby OCRA (coming soon)   
+### Ruby OCRA (coming soon)
 
 ## Contributing
 
