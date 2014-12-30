@@ -45,13 +45,14 @@ def watch_for(filename, pattern)
     line = f.gets
     # If the pattern is matched, perform an action
     puts "Found #{@pattern} in #{line}" if line =~ /#{pattern}/
+    sleep(2)
   end
 end # of watch_for
 
 def send_email_os
   # send an email using the OS's local email facility.
   Thread.new do
-    %x[ "echo \"#{@pattern} found\" | mailx -s \"#{@pattern} found\" phillip.dudley@cerner.com" ]
+    %x[ "echo \"#{@pattern} found\" | mailx -s \"#{@pattern} found\" email@address.com" ]
   end
 end
 
