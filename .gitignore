@@ -14,3 +14,5 @@
 mkmf.log
 *~
 *.swp
+# Comment this out if you need to include and commit JAR files.
+#*.jar

@@ -36,11 +36,14 @@ end
 def watch_for(filename, pattern)
   # Open the file to monitored in READ-ONLY mode
   f = File.open(filename,"r")
+  # http://ruby-doc.org/core-2.1.1/IO.html#method-i-seek
   # Seek to th end of the file
   f.seek(0,IO::SEEK_END)
   # Until the program is exited, perform the next block.
   while true do
-    # Run the seek part again
+    # http://docs.ruby-doc.com/docs/ProgrammingRuby/html/ref_m_kernel.html#Kernel.select
+    # select([?]) waits until there is new input, and then gets the line, and
+    # then applies the pattern to the new line.
     select([f])
     line = f.gets
     # If the pattern is matched, perform an action
