@@ -21,8 +21,12 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
 
-  # The gem, even though its requried, doesn't need to be listed here.
+  # Uncomment for JRuby's use of Warbler
   spec.add_development_dependency "warbler"
   spec.add_runtime_dependency "warbler"
+
+  # Uncomment out for use of Ruby's OCRA
+  #spec.add_development_dependency "ocra"
+  #spec.add_runtime_dependency "ocra"
 
 end
