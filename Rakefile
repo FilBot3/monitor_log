@@ -20,7 +20,7 @@ namespace :run do
   desc "Run the JRuby JAR"
   task :jar do
     puts "=> Running the JRuby JAR with Java"
-    sh "java -jar monitor_log --help"
+    sh "java -jar pkg/monitor_log.jar --help"
     puts "=> End Run"
   end
 
@@ -36,6 +36,16 @@ namespace :run do
     puts "=> Running with JRuby JBundle Exec"
     sh "jbundle exec jruby bin/monitor_log --help"
     puts "=> End Run"
+  end
+
+end
+
+desc "Run tests, or specs"
+namespace :test do
+
+  desc "Run log monitor test"
+  task :log do
+    puts "=> Testing the log monitoring facility."
   end
 
 end
